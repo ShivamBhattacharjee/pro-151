@@ -1,0 +1,24 @@
+AFRAME.registerComponent("car",{
+    schema:{
+        model_img:{type:"string",default:"./151-assests-main/assets/car/scene.gltf"}
+    },
+
+    init:function(){
+        this.el.setAttribute("gltf-model",this.data.model_img),
+        this.el.setAttribute("position",{
+            x:0,
+            y:78,
+            z:0
+        })
+        this.el.setAttribute("rotation",{
+            x:0,
+            y:-90,
+            z:0
+        })
+        this.el.setAttribute('scale',{
+            x:0.2,
+            y:0.2,
+            z:0.2
+        })
+    }
+})
